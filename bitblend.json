@@ -1,0 +1,54 @@
+ {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "number"
+    },
+    "duration": {
+      "type": "number"
+    },
+    "level": {
+      "type": "string",
+      "enum": ["easy", "intermediate", "hard"]
+    },
+    "ingredient": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "unit": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "title",
+          "quantity",
+          "unit"
+        ]
+      }
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "duration",
+    "ingredient",
+    "steps"
+  ]
+}
